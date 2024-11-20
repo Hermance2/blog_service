@@ -10,4 +10,8 @@ class File extends Model
         'file_name',
         'path'
     ];
+
+    public function BlogFile(){//appartenai 1 blog
+        return $this->belongsTo(Blog::class,'blog_id','id');
+    }
 }
